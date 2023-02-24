@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-## Dimension reduction, Clustering and Multiclasses classification using Spark MLlib
+## Dimension reduction, Clustering and Multiclass classification using Spark MLlib
 
 Muitos projetos de Big Data em uso em grandes companhias ainda usam bibliotecas que não estão preparadas para serem executadas em processamento distribuído, como por exemplo, scikit klearn.
 
@@ -10,9 +10,9 @@ Esse projeto é apenas para apoiar profissionais que estão fazendo a implementa
 
 Foram as seguintes bibliotecas Spark:
 
-* Redução de dimensionalidade usando [PCA](https://www.postgresql.org/)
-* Clusterização usando [KMeans](https://debezium.io/)
-* Classificação usando [Random Forest](https://kafka.apache.org/)
+* Redução de dimensionalidade usando [PCA](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.feature.PCA.html)
+* Clusterização usando [KMeans](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.clustering.KMeans.html)
+* Classificação usando [Random Forest](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.classification.RandomForestClassificationModel.html)
 
 <p align="right">(<a href="#top">voltar ao início</a>)</p>
 

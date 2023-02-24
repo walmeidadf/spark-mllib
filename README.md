@@ -35,17 +35,18 @@ Para testar se a instalação está correta, pode ser usado o comando `docker-co
    ```
 
 
-### Instalalação
+### Clonando o repositório e inicianddo o container
 
 1. Clone o repositório
    ```sh
    git clone https://github.com/walmeidadf/spark-mllib.git
    ```
-2. Construa e execute o aplicativo com o comando do Docker Compose na pasta do projeto.
+2. Execute o comando docker que irá inicializar o container.
    ```sh
-   cd cdc
-   docker-compose up
+   docker run -it --rm -p 10888:8888 -v "${PWD}/work":/home/jovyan/work jupyter/pyspark-notebook:spark-3.3.2 start.sh jupyter lab --LabApp.token=''
    ```
+
+*Importante:* o comando está redirecionando a porta `10888`, está carregando o server jupyter sem senha e redirecionando o acesso da pasta `/home/jovyan/work` para a pasta `work` da máquina local.
 
 <p align="right">(<a href="#top">voltar ao início</a>)</p>
 
@@ -53,9 +54,9 @@ Para testar se a instalação está correta, pode ser usado o comando `docker-co
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-Para acessar o notenook vc pode acessar a porta redirecionada pelo docer, no meu exemplo a porta `8080`. Assim o notebook pode ser acessado usando o link  `http://localhost:8080`.
+Para acessar o notenook vc pode acessar a porta redirecionada pelo docer, no meu exemplo a porta `10888`. Assim o notebook pode ser acessado usando o link  `http://localhost:8080`.
 
-Na pasta `work` existem alguns notebook que dão alguns exemplos de como rodar o modelo..
+Na pasta `work` existe o notebook `Spark-ml-pca-clustering-rf.ipynb` onde está implementado o código pyspark.
 
 <!-- ROADMAP -->
 ## Roadmap
